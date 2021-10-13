@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Oct 13 18:52:38 2021
+
+@author: ALEFIA RINI
+"""
+
+print('TUGAS ALGO BU RATNA PUISI :)')
+
+
+
+judul = str(input('Masukkan judul puisi: ')) 
+filename = (('%s.txt')%(judul)) 
+f = open(filename,'w') 
+f.write(judul) 
+f.write('\n\n')
+print (('File %s dibuat!')%(filename))
+
+for i in range(100): 
+    print()
+
+
+print('Ketik "exit" untuk keluar!')    
+print (judul,'\n')
+
+baris = True
+nomor = 0 
+while baris == True: 
+    nomor += 1; num = str(nomor) 
+    penomoran = str(('%s  ')%(num))
+    isi = str(input(penomoran))
+    if isi == 'exit': 
+        print('\nDisimpan. Terimakasih!')
+        baris = False
+    else:
+        f.write(isi) 
+        f.write('\n')
+f.close() 
+    
